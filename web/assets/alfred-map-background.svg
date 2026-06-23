@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+  <defs>
+    <filter id="grain"><feTurbulence baseFrequency=".55" numOctaves="3" seed="17" type="fractalNoise"/><feColorMatrix values="0 0 0 0 .24 0 0 0 0 .18 0 0 0 0 .09 0 0 0 .16 0"/></filter>
+    <filter id="ink"><feTurbulence baseFrequency=".025" numOctaves="2" seed="8" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="3"/></filter>
+    <pattern id="waves" width="48" height="24" patternUnits="userSpaceOnUse"><path d="M0 15Q12 5 24 15T48 15" fill="none" stroke="#466b73" stroke-width="2" opacity=".42"/></pattern>
+    <linearGradient id="land" x2="0" y2="1"><stop stop-color="#d8cca7"/><stop offset="1" stop-color="#b7aa7f"/></linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="#79959a"/><rect width="1200" height="760" fill="url(#waves)"/>
+  <path d="M-20 40C135 24 280 47 386 91c91 38 177 35 281 5 126-36 278-24 375 27 70 37 124 91 178 163l18 494H-20Z" fill="url(#land)" stroke="#4b4737" stroke-width="8" filter="url(#ink)"/>
+  <path d="M1118 0c-24 54-27 119-3 176 21 50 30 92 13 137-17 44-57 69-68 118-13 58 13 104 58 142" fill="none" stroke="#6f8f95" stroke-width="54" opacity=".92"/>
+  <path d="M1186 110c-82 34-143 64-197 105-50 38-89 81-137 111-60 37-119 43-170 71" fill="none" stroke="#4f7880" stroke-width="19" opacity=".8"/>
+  <path d="M1186 110c-82 34-143 64-197 105-50 38-89 81-137 111-60 37-119 43-170 71" fill="none" stroke="#d0d0ad" stroke-width="2" opacity=".55"/>
+  <g fill="#67734d" stroke="#43513b" stroke-width="2" opacity=".38">
+    <path d="M70 423l22-45 22 45h-13l20 39H63l20-39z"/><path d="M138 365l17-35 18 35h-10l15 31h-48l15-31z"/>
+    <path d="M274 322l20-42 20 42h-12l18 36h-52l17-36z"/><path d="M342 289l16-33 17 33h-10l14 28h-44l14-28z"/>
+    <path d="M943 489l19-39 19 39h-11l16 34h-49l16-34z"/><path d="M1013 451l16-34 17 34h-10l15 29h-45l14-29z"/>
+  </g>
+  <g fill="none" stroke="#75674b" stroke-width="5" opacity=".24"><path d="M112 584q52-58 108 0t108 0"/><path d="M287 647q47-52 98 0t98 0"/><path d="M465 565q45-51 94 0t94 0"/><path d="M687 187q48-47 98 0t98 0"/></g>
+  <g fill="#4c4434" font-family="Georgia,serif" font-style="italic" opacity=".2"><text x="66" y="706" font-size="48">Westseaxna rice</text><text x="760" y="112" font-size="37">Mierce</text><text x="950" y="658" font-size="34">Cantware</text><text x="952" y="250" font-size="27" transform="rotate(-28 952 250)">Temese</text></g>
+  <g transform="translate(1090 620)" stroke="#4d4637" fill="none" opacity=".5"><circle r="48" stroke-width="3"/><path d="M0-42V42M-42 0H42M-30-30L30 30M30-30L-30 30" stroke-width="2"/><path d="M0-58l8 18H-8zM58 0l-18 8V-8zM0 58l-8-18H8zM-58 0l18-8v16z" fill="#4d4637"/></g>
+  <rect width="1200" height="760" filter="url(#grain)" opacity=".42"/>
+</svg>

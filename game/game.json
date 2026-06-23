@@ -1,0 +1,175 @@
+{
+  "title": "ALFRED: The Burden of Wessex",
+  "version": "0.6",
+  "tracks": ["legitimacy", "obligation", "wealth", "service", "reform"],
+  "spaces": [
+    {"id": "devon", "name": "Exeter", "kind": "wessex", "coastal": true, "burh": false, "adjacent": ["somerset", "dorset"]},
+    {"id": "somerset", "name": "Athelney", "kind": "wessex", "coastal": true, "burh": true, "adjacent": ["devon", "dorset", "wiltshire"]},
+    {"id": "dorset", "name": "Wareham", "kind": "wessex", "coastal": true, "burh": false, "adjacent": ["devon", "somerset", "wiltshire", "hampshire"]},
+    {"id": "hampshire", "name": "Winchester", "kind": "wessex", "coastal": true, "burh": true, "royal_seat": true, "adjacent": ["dorset", "wiltshire", "berkshire", "kent"]},
+    {"id": "wiltshire", "name": "Wilton", "kind": "wessex", "coastal": false, "burh": false, "adjacent": ["somerset", "dorset", "hampshire", "berkshire"]},
+    {"id": "berkshire", "name": "Reading", "kind": "wessex", "coastal": false, "burh": true, "adjacent": ["wiltshire", "hampshire", "thames_valley", "mercia"]},
+    {"id": "kent", "name": "Kent", "kind": "wessex", "coastal": true, "burh": true, "adjacent": ["hampshire", "london"]},
+    {"id": "thames_valley", "name": "Wallingford", "kind": "approach", "coastal": false, "river": true, "burh": false, "adjacent": ["berkshire", "london", "mercia"]},
+    {"id": "london", "name": "London", "kind": "allied", "coastal": true, "river": true, "burh": true, "adjacent": ["kent", "thames_valley", "mercia"]},
+    {"id": "mercia", "name": "English Mercia", "kind": "allied", "coastal": false, "burh": true, "adjacent": ["berkshire", "thames_valley", "london"]}
+  ],
+  "river_connections": [
+    ["london", "thames_valley"],
+    ["thames_valley", "berkshire"]
+  ],
+  "armies": {
+    "guthrum": {
+      "name": "Guthrum's Host",
+      "entry": "mercia",
+      "doctrine": "Winter Seizure",
+      "text": "Gain +1 in a region containing an inactive Burh or royal seat."
+    },
+    "sea_kings": {
+      "name": "Seaborne Host",
+      "entry": "kent",
+      "doctrine": "Coastal Mobility",
+      "text": "When Raiding, may choose a connected coastal region instead of the shortest route."
+    },
+    "hastein": {
+      "name": "Hæsten's Host",
+      "entry": "kent",
+      "doctrine": "Feigned Terms",
+      "text": "The first negotiation with this Host costs 1 additional Wealth."
+    },
+    "thames_army": {
+      "name": "Thames Host",
+      "entry": "london",
+      "doctrine": "River Penetration",
+      "text": "May move two River connections while Seeking a camp."
+    }
+  },
+  "priorities": [
+    {"id": "P01", "name": "Shield of the Shires", "resolve": "Once per Scenario, after a Raid would reduce Readiness, lose 1 Obligation to prevent that loss.", "legacy": "Add 2 if no Wessex region is Exhausted.", "tag": "defense"},
+    {"id": "P02", "name": "War Leader", "resolve": "Once per Scenario, after both battle dice are rolled, add 2 to the West Saxon total.", "legacy": "Add 2 if Alfred won at least two battles.", "tag": "battle"},
+    {"id": "P03", "name": "Builder of Burhs", "resolve": "Once per Scenario, Fortify costs 1 Wealth and does not reduce the region's Readiness.", "legacy": "Add 2 if three or more Burhs are active.", "tag": "burh"},
+    {"id": "P04", "name": "Lawgiver", "resolve": "Once per Scenario, after using a KINGDOM effect, gain 1 Obligation.", "legacy": "Add 2 if Reform is 4 or more.", "tag": "law"},
+    {"id": "P05", "name": "Maker of Terms", "resolve": "Once per Scenario, after a Negotiation roll, add 2 to that roll.", "legacy": "Add 2 if Alfred negotiated successfully.", "tag": "diplomacy"},
+    {"id": "P06", "name": "Keeper of the Harvest", "resolve": "Once per Scenario, after Stewarding, recover one other eligible region by one step.", "legacy": "Add 2 if four or more Wessex regions are Ready.", "tag": "stewardship"},
+    {"id": "P07", "name": "Lord of Saxons and Mercians", "resolve": "Once per Scenario, place the Mercian allied force with Alfred until the end of the round.", "legacy": "Add 2 if English Mercia is Ready and London has no Host or camp.", "tag": "alliance"},
+    {"id": "P08", "name": "Guardian of the Household", "resolve": "Once per Scenario, one Household force contributes 3 instead of 1 in a battle or Clash.", "legacy": "Add 2 if both Household forces survive.", "tag": "household"}
+  ],
+  "commands": [
+    {"id": "C01", "name": "Call the Fyrd", "command": "Muster from one additional adjacent Ready region.", "kingdom": "Steward. If the region becomes Ready, gain 1 Obligation instead of Wealth.", "tag": "muster"},
+    {"id": "C02", "name": "Royal Retainers", "command": "March, then Confront with +1 West Saxon total.", "kingdom": "Return one lost Household force by spending 2 Wealth.", "tag": "force"},
+    {"id": "C03", "name": "Fortified Bridge", "command": "A Danish Host using a River connection stops; move Alfred there.", "kingdom": "Pay 1 Wealth to activate the Reading or London Burh and gain 1 Reform.", "tag": "burh"},
+    {"id": "C04", "name": "Divide the Fyrd", "command": "Leave up to two fyrds behind, then March. They defend without Alfred this round.", "kingdom": "Gain 1 Obligation; you cannot Muster this round.", "tag": "service"},
+    {"id": "C05", "name": "Ride to the Muster", "command": "Move Alfred up to two connections, then Muster one local Ready fyrd.", "kingdom": "Gain 1 Legitimacy if Alfred ends in a Depleted region.", "tag": "movement"},
+    {"id": "C06", "name": "The Refuge at Athelney", "command": "Move Alfred and Household forces to Athelney; Danish Hosts cannot follow this round.", "kingdom": "Set Legitimacy to 2 if lower, then make Athelney Depleted.", "tag": "survival"},
+    {"id": "C07", "name": "Choose the Ground", "command": "Confront with Drive Off; reroll the West Saxon die once.", "kingdom": "Reveal both Crises in next round's group. Choose which one will occur.", "tag": "planning"},
+    {"id": "C08", "name": "Forced Levy", "command": "Emergency Muster up to two Depleted regions; lose only 1 Obligation total.", "kingdom": "Gain 2 Wealth and lose 1 Obligation.", "tag": "muster"},
+    {"id": "C09", "name": "Disperse Before Harvest", "command": "Steward twice, choosing different regions.", "kingdom": "Gain 2 Obligation; lose 1 Wealth.", "tag": "recovery"},
+    {"id": "C10", "name": "English Mercian Aid", "command": "Place one allied force in English Mercia or London for this round.", "kingdom": "Gain 1 Reform and 1 Legitimacy if no Danish Host occupies English Mercia.", "tag": "alliance"},
+    {"id": "C11", "name": "Offer Terms", "command": "Negotiate with +2 to the roll.", "kingdom": "Spend 2 Wealth to place an Oath without rolling; lose 1 Legitimacy.", "tag": "diplomacy"},
+    {"id": "C12", "name": "Hostages and Baptism", "command": "After a successful negotiation, reduce Strength by 1 and gain 1 Legitimacy.", "kingdom": "If a Host is Strength 2 or less, spend 1 Wealth to gain 1 Reform and 1 Legitimacy.", "tag": "settlement"},
+    {"id": "C13", "name": "Repair the Roads", "command": "March through one additional connection.", "kingdom": "Pay 1 Wealth: gain 1 Reform, then Steward.", "tag": "infrastructure"},
+    {"id": "C14", "name": "Law and Assembly", "command": "Gain 1 Obligation, then return any number of fyrds with Alfred.", "kingdom": "Gain 1 Reform and either 1 Legitimacy or 1 Obligation.", "tag": "law"},
+    {"id": "C15", "name": "Restore London", "command": "Remove a fortified camp from London or move a Host there to Wallingford.", "kingdom": "If London is clear, activate its Burh and gain 2 Reform; pay 2 Wealth.", "tag": "london"},
+    {"id": "C16", "name": "Prepare the Succession", "command": "One Household force grants +2 instead of +1 in this battle.", "kingdom": "Pay 1 Wealth: gain 1 Legitimacy and 1 Reform.", "tag": "legacy"}
+  ],
+  "crises": [
+    {"id": "E01", "group": "A", "name": "The Host at Reading", "army": "guthrum", "intent": "draw_fyrd", "arrival": "Make Reading Depleted if it is Ready.", "design": "If Alfred is west of Wilton, lose 1 Legitimacy."},
+    {"id": "E02", "group": "A", "name": "Another Muster", "army": "guthrum", "intent": "raid", "arrival": "Increase Guthrum's Strength by 1.", "design": "If Service is 2+, lose 1 Obligation."},
+    {"id": "E03", "group": "B", "name": "Battle Without Rest", "army": "guthrum", "intent": "draw_fyrd", "arrival": "Increase Service by 1 if any fyrd is in the field.", "design": "A West Saxon loss this round also reduces Obligation by 1."},
+    {"id": "E04", "group": "B", "name": "A Royal Death", "army": "sea_kings", "intent": "raid", "arrival": "Lose 1 Legitimacy.", "design": "Gain it back if Alfred wins or negotiates this round."},
+    {"id": "E05", "group": "C", "name": "Winter at Wareham", "army": "sea_kings", "intent": "seek_base", "arrival": "Move the Seaborne Host to Wareham if it is undefended.", "design": "If it establishes a fortified camp, lose 1 Obligation."},
+    {"id": "E06", "group": "C", "name": "Oaths Broken", "army": "guthrum", "intent": "seek_base", "arrival": "Remove Guthrum's Oath or increase its Strength by 1.", "design": "Negotiation with Guthrum suffers -1 this round."},
+    {"id": "E07", "group": "D", "name": "The Taking of Chippenham", "army": "guthrum", "intent": "seek_base", "arrival": "Move Guthrum's Host one connection toward Winchester.", "design": "Deactivate the Burh where Guthrum's Host ends, if any."},
+    {"id": "E08", "group": "D", "name": "Refuge at Athelney", "army": "guthrum", "intent": "raid", "arrival": "If Winchester is occupied, move Alfred and Household forces to Athelney.", "design": "If Alfred is at Athelney, gain 1 Obligation; otherwise recover Exeter or Wareham one step."},
+    {"id": "E09", "group": "E", "name": "The Muster at Egbert's Stone", "army": "guthrum", "intent": "draw_fyrd", "arrival": "Recover Wilton or Athelney one step.", "design": "Force Decision gains +1 this round."},
+    {"id": "E10", "group": "E", "name": "Terms After Battle", "army": "guthrum", "intent": "raid", "arrival": "If Guthrum is Strength 2 or less, Negotiation costs no Wealth.", "design": "A successful negotiation gains 1 Reform."},
+    {"id": "E11", "group": "F", "name": "Ships in the Channel", "army": "sea_kings", "intent": "raid", "arrival": "Increase Seaborne Host Strength by 1. Its Raid target is the nearer of Kent or Wareham; ties favor Kent.", "design": "An inactive coastal Burh cannot protect Readiness this round."},
+    {"id": "E12", "group": "F", "name": "London Contested", "army": "thames_army", "intent": "seek_base", "arrival": "Lose 1 Wealth unless London has an active Burh.", "design": "If London is clear at round end, gain 1 Legitimacy."},
+    {"id": "E13", "group": "G", "name": "Two Great Hosts", "army": "hastein", "intent": "join", "arrival": "Increase Hæsten's Host and the Thames Host by 1.", "design": "If they share a region, lose 1 Legitimacy."},
+    {"id": "E14", "group": "G", "name": "Across the Weald", "army": "hastein", "intent": "raid", "arrival": "Move Hæsten's Host to Kent if it is elsewhere.", "design": "If Kent is Exhausted, Hæsten's Host acts again with Seek Camp."},
+    {"id": "E15", "group": "H", "name": "Fortified Camps", "army": "thames_army", "intent": "seek_base", "arrival": "The strongest Host in a Wessex region without a camp establishes one; otherwise it Musters.", "design": "Blockade costs no Wealth this round."},
+    {"id": "E16", "group": "H", "name": "The Long Pursuit", "army": "hastein", "intent": "draw_fyrd", "arrival": "Lose 1 Obligation or return one fyrd to its home reserve.", "design": "If no fortified camp remains, gain 1 Reform."}
+  ],
+  "scenarios": [
+    {
+      "id": "S01", "name": "The Year of Battles", "years": "871", "rounds": 6, "difficulty": 1,
+      "groups": ["A", "A", "B", "B", "C", "C"], "harvest_rounds": [3, 6],
+      "tracks": {"legitimacy": 5, "obligation": 6, "wealth": 4, "reform": 0},
+      "readiness": {"devon": 2, "somerset": 2, "dorset": 2, "hampshire": 2, "wiltshire": 2, "berkshire": 1, "kent": 1, "thames_valley": 1, "london": 1, "mercia": 1},
+      "burhs": [], "armies": {"guthrum": ["thames_valley", 4], "sea_kings": ["kent", 2]},
+      "royal_seat": "hampshire",
+      "objective": {"wins": 1, "min_ready": 1},
+      "mandate": {"name": "An Army Still Answers", "text": "Win one battle and finish with at least one Wessex region Ready."}
+    },
+    {
+      "id": "S02", "name": "A King at the Brink", "years": "875-878", "rounds": 7, "difficulty": 3,
+      "groups": ["C", "C", "D", "D", "D", "E", "E"], "harvest_rounds": [3, 6],
+      "tracks": {"legitimacy": 5, "obligation": 6, "wealth": 5, "reform": 0},
+      "readiness": {"devon": 2, "somerset": 2, "dorset": 1, "hampshire": 1, "wiltshire": 2, "berkshire": 0, "kent": 1, "thames_valley": 1, "london": 1, "mercia": 1},
+      "burhs": ["somerset"], "armies": {"guthrum": ["berkshire", 5], "sea_kings": ["dorset", 3]},
+      "royal_seat": "somerset",
+      "objective": {"wins": 1, "min_legitimacy": 2, "min_ready": 1},
+      "mandate": {"name": "Preserve the West", "text": "Athelney must remain free of a fortified camp and Alfred must Muster there at least once."}
+    },
+    {
+      "id": "S03", "name": "Ethandun (Edington)", "years": "878", "rounds": 5, "difficulty": 2,
+      "groups": ["D", "E", "E", "E", "E"], "harvest_rounds": [3],
+      "tracks": {"legitimacy": 4, "obligation": 5, "wealth": 3, "reform": 0},
+      "readiness": {"devon": 1, "somerset": 2, "dorset": 1, "hampshire": 1, "wiltshire": 2, "berkshire": 1, "kent": 0, "thames_valley": 0, "london": 1, "mercia": 1},
+      "burhs": ["somerset"], "armies": {"guthrum": ["wiltshire", 4]},
+      "royal_seat": "somerset",
+      "objective": {"guthrum_max": 3, "successful_negotiation": 1},
+      "mandate": {"name": "Victory and Terms", "text": "Reduce Guthrum's Host to Strength 3 or less, then negotiate successfully without Obligation falling below 2."}
+    },
+    {
+      "id": "S04", "name": "The Shield of Wessex", "years": "c. 879-886", "rounds": 7, "difficulty": 2,
+      "groups": ["E", "F", "F", "F", "G", "G", "G"], "harvest_rounds": [3, 6],
+      "tracks": {"legitimacy": 5, "obligation": 5, "wealth": 6, "reform": 2},
+      "readiness": {"devon": 2, "somerset": 2, "dorset": 2, "hampshire": 2, "wiltshire": 2, "berkshire": 2, "kent": 1, "thames_valley": 1, "london": 1, "mercia": 1},
+      "burhs": ["somerset"], "armies": {"sea_kings": ["kent", 3], "thames_army": ["london", 2]},
+      "royal_seat": "hampshire",
+      "objective": {"min_reform": 5, "active_burhs": 3},
+      "mandate": {"name": "Connected Defense", "text": "Finish with active Burhs in three connected regions and no fortified camp in Wessex."}
+    },
+    {
+      "id": "S05", "name": "London and the Mercians", "years": "c. 880s", "rounds": 6, "difficulty": 2,
+      "groups": ["F", "F", "G", "G", "G", "H"], "harvest_rounds": [3, 6],
+      "tracks": {"legitimacy": 5, "obligation": 5, "wealth": 4, "reform": 2},
+      "readiness": {"devon": 2, "somerset": 2, "dorset": 2, "hampshire": 2, "wiltshire": 2, "berkshire": 2, "kent": 1, "thames_valley": 1, "london": 1, "mercia": 2},
+      "burhs": ["hampshire", "berkshire"], "armies": {"thames_army": ["london", 4], "sea_kings": ["kent", 2]},
+      "royal_seat": "hampshire",
+      "objective": {"min_reform": 4, "london_clear": 1},
+      "mandate": {"name": "Shared Frontier", "text": "Activate London and finish with English Mercia Ready and Legitimacy 4 or more."}
+    },
+    {
+      "id": "S06", "name": "The Return of the Armies", "years": "892-894", "rounds": 8, "difficulty": 4,
+      "groups": ["F", "G", "G", "G", "H", "H", "H", "H"], "harvest_rounds": [3, 6],
+      "tracks": {"legitimacy": 5, "obligation": 5, "wealth": 5, "reform": 4},
+      "readiness": {"devon": 2, "somerset": 2, "dorset": 2, "hampshire": 2, "wiltshire": 2, "berkshire": 2, "kent": 2, "thames_valley": 1, "london": 2, "mercia": 2},
+      "burhs": ["somerset", "hampshire", "berkshire", "london"], "armies": {"hastein": ["kent", 4], "thames_army": ["london", 4], "sea_kings": ["dorset", 2]},
+      "royal_seat": "hampshire",
+      "objective": {"max_bases": 1, "min_ready": 3},
+      "mandate": {"name": "Keep the Hosts Apart", "text": "Hæsten's Host and the Thames Host may never end a round together; remove at least two fortified camps."}
+    },
+    {
+      "id": "S07", "name": "The Long Pursuit", "years": "894-896", "rounds": 8, "difficulty": 3,
+      "groups": ["G", "G", "H", "H", "H", "H", "H", "H"], "harvest_rounds": [3, 6],
+      "tracks": {"legitimacy": 5, "obligation": 5, "wealth": 5, "reform": 4},
+      "readiness": {"devon": 2, "somerset": 2, "dorset": 1, "hampshire": 2, "wiltshire": 1, "berkshire": 1, "kent": 1, "thames_valley": 1, "london": 2, "mercia": 2},
+      "burhs": ["somerset", "hampshire", "berkshire", "london"], "armies": {"hastein": ["thames_valley", 4], "thames_army": ["mercia", 3]},
+      "royal_seat": "hampshire",
+      "objective": {"max_bases": 2, "min_obligation": 2},
+      "mandate": {"name": "Deny a Lasting Camp", "text": "Finish with at most two fortified camps and use both Delay and Blockade during the Scenario."}
+    },
+    {
+      "id": "S08", "name": "The Burden of Wessex", "years": "871-899", "rounds": 10, "difficulty": 4,
+      "groups": ["A", "B", "C", "D", "E", "F", "G", "G", "H", "H"], "harvest_rounds": [3, 6, 9],
+      "tracks": {"legitimacy": 5, "obligation": 6, "wealth": 5, "reform": 0},
+      "readiness": {"devon": 2, "somerset": 2, "dorset": 2, "hampshire": 2, "wiltshire": 2, "berkshire": 1, "kent": 1, "thames_valley": 1, "london": 1, "mercia": 1},
+      "burhs": [], "armies": {"guthrum": ["thames_valley", 4], "sea_kings": ["kent", 2], "hastein": ["mercia", 1], "thames_army": ["london", 1]},
+      "royal_seat": "hampshire",
+      "objective": {"min_reform": 4, "min_ready": 3, "max_bases": 1},
+      "mandate": {"name": "Three Burdens", "text": "Survive the early crisis, settle one Host, and finish with three active Burhs, Reform 4, and a Ready royal seat."}
+    }
+  ]
+}

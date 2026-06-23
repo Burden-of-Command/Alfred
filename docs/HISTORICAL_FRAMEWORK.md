@@ -6,7 +6,7 @@ The full design horizon is Alfred's reign, 871-899, with focused scenarios
 covering shorter episodes. The game should distinguish three broad phases:
 
 1. **Crisis, 871-878:** accession during war, repeated campaigning, collapse,
-   refuge, recovery, and Edington.
+   refuge, recovery, and Ethandun (conventionally identified with Edington).
 2. **Reconstruction, c. 879-892:** settlement, fortified defense, military and
    administrative reform, London, and Mercian cooperation.
 3. **Renewed invasion, 892-896:** multiple mobile Viking forces, fortified
@@ -58,7 +58,7 @@ The design may include:
 - Alfred;
 - Æthelred, for the 871 prelude;
 - Guthrum;
-- Hastein;
+- Hæsten;
 - Edward, Alfred's son;
 - Æthelred and Æthelflæd of Mercia;
 - Ealhswith;
@@ -92,4 +92,3 @@ Research should begin with:
 - modern military and political studies of ninth-century Wessex and Mercia.
 
 This file is a framework, not a completed historical bibliography.
-

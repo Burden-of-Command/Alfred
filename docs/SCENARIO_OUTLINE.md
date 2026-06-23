@@ -25,7 +25,7 @@ lead toward a possible concentration and decisive return.
 Distinct pressure: preserve legitimacy and a viable muster base while losing
 geographic control.
 
-## 3. Edington, 878
+## 3. Ethandun (Edington), 878
 
 **Question:** Can Alfred assemble one army strong enough to force a settlement
 without exhausting the kingdom beyond recovery?
@@ -98,4 +98,3 @@ Every scenario should specify:
 - one unique rule no longer than a short paragraph;
 - an immediate Historical Mandate;
 - a legacy result based on both survival and the condition of the kingdom.
-

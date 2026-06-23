@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ALFRED: The Burden of Wessex</title>
+  <link rel="stylesheet" href="styles.css?v=0.8">
+</head>
+<body>
+  <header class="masthead">
+    <div class="brand"><div class="seal">A</div><div>
+      <p class="eyebrow">The Burden of Command · Volume II</p>
+      <h1>ALFRED</h1><p class="subtitle">The Burden of Wessex</p>
+    </div></div>
+    <div class="header-actions">
+      <button id="rulesButton" class="ghost">Rules</button>
+      <button id="restartButton" class="ghost hidden">New game</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="setupScreen" class="setup">
+      <div class="setup-copy">
+        <p class="eyebrow">Wessex · 871-899</p>
+        <h2>The kingdom is the army.</h2>
+        <p>Call the fyrd from named regions, bear the cost of its service, and
+          decide what land can be left weak. Battle alone will not save Wessex.</p>
+        <div class="setup-form">
+          <label>Scenario<select id="scenarioSelect"></select></label>
+          <label>Challenge<select id="difficultySelect">
+            <option value="chronicle">Chronicle</option>
+            <option value="king" selected>King</option>
+            <option value="ordeal">Ordeal</option>
+          </select></label>
+          <label class="check"><input id="guidedToggle" type="checkbox" checked> Guided play</label>
+          <button id="startButton" class="primary">Take up the burden</button>
+        </div>
+      </div>
+      <div class="setup-art"><img src="assets/alfred-command-key-art.png" alt="Alfred directing the defense of Wessex"></div>
+    </section>
+
+    <section id="gameScreen" class="game hidden">
+      <div id="guide" class="guide"></div>
+      <section class="top-grid">
+        <article class="panel scenario">
+          <p id="scenarioKicker" class="eyebrow"></p><h2 id="scenarioName"></h2>
+          <p id="mandate"></p><div id="objective" class="objective"></div>
+          <div id="priorityCard" class="priority-mini"></div>
+        </article>
+        <div id="tracks" class="tracks"></div>
+      </section>
+
+      <section class="war-grid">
+        <article class="panel map-panel">
+          <div class="section-head"><div><p class="eyebrow">Operational map</p><h3>Wessex and the approaches</h3></div><span id="phaseBadge"></span></div>
+          <div id="map" class="map"></div>
+          <p id="mapPrompt" class="prompt"></p>
+        </article>
+        <aside class="right-column">
+          <article class="panel crisis"><p class="eyebrow">Current crisis</p><div id="crisisCard"></div></article>
+          <article class="panel orders"><p class="eyebrow">Your decision</p><h3 id="actionTitle"></h3><p id="actionText"></p><div id="actionButtons" class="actions"></div></article>
+        </aside>
+      </section>
+
+      <section class="lower-grid">
+        <article class="panel"><div class="section-head"><div><p class="eyebrow">Royal council</p><h3>Command hand</h3></div><span id="deckCount"></span></div><div id="commandHand" class="command-hand"></div></article>
+        <article class="panel log-panel"><p class="eyebrow">Anglo-Saxon Chronicle</p><h3>Campaign log</h3><ol id="log" class="log"></ol></article>
+      </section>
+    </section>
+  </main>
+  <dialog id="modal"><div id="modalContent"></div></dialog>
+  <script type="module" src="app.js?v=0.6"></script>
+</body>
+</html>

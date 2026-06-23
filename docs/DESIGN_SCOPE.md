@@ -26,7 +26,7 @@ harvest periods allow recovery.
 
 This must use markers or flipping states, never manpower arithmetic.
 
-### 2. Viking Armies Have Intent, Not Administration
+### 2. Danish Hosts Have Intent, Not Administration
 
 Each Viking army should have a visible current purpose, such as:
 
@@ -89,7 +89,7 @@ small to solve the war alone.
 
 Use approximately 8-12 regions connected by:
 
-- roads for Saxon concentration;
+- roads for West Saxon concentration;
 - rivers for Viking penetration and withdrawal;
 - coasts for arrival and escape;
 - major crossings;
@@ -206,4 +206,3 @@ The concept should not progress to final art until tests show:
 5. experienced players cannot identify one dominant muster pattern;
 6. the game reliably finishes within the intended play time;
 7. blind testers can run the opposition without designer assistance.
-
