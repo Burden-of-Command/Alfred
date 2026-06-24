@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2.5in" height="3.5in" viewBox="0 0 750 1050">
+<rect width="750" height="1050" rx="34" fill="#17272d"/>
+<rect x="20" y="20" width="710" height="1010" rx="28" fill="none" stroke="#c49a45" stroke-width="4"/>
+<path d="M55 165H695M55 550H695M55 914H695" stroke="#c49a45" stroke-width="2"/>
+<path d="M30 80Q80 30 130 80T230 80M520 80Q570 30 620 80T720 80" fill="none" stroke="#c49a45" stroke-width="2" opacity=".7"/>
+<text x="55" y="78" fill="#c49a45" font-family="Arial,sans-serif" font-size="18" font-weight="bold" letter-spacing="2">C06  ROYAL COUNSEL / SURVIVAL</text>
+<text x="55" y="137" fill="#f0e8d5" font-family="Georgia,serif" font-size="42" font-weight="bold">The Refuge at Athelney</text>
+<text x="55" y="215" fill="#c49a45" font-family="Arial,sans-serif" font-size="20" font-weight="bold" letter-spacing="3">COMMAND</text>
+<text x="55" y="270" fill="#f0e8d5" font-family="Georgia,serif" font-size="27"><tspan x="55" dy="0">Move Alfred and Household forces to</tspan><tspan x="55" dy="34">Athelney; Danish Hosts cannot follow this</tspan><tspan x="55" dy="34">round.</tspan></text>
+<text x="55" y="602" fill="#c49a45" font-family="Arial,sans-serif" font-size="20" font-weight="bold" letter-spacing="3">KINGDOM</text>
+<text x="55" y="657" fill="#f0e8d5" font-family="Georgia,serif" font-size="27"><tspan x="55" dy="0">Set Legitimacy to 2 if lower, then make</tspan><tspan x="55" dy="34">Athelney Depleted.</tspan></text>
+<text x="375" y="925" text-anchor="middle" fill="#c49a45" font-family="Arial,sans-serif" font-size="13" font-weight="bold" letter-spacing="2">THE KINGDOM IS THE ARMY</text>
+<path d="M320 965C320 925 430 925 430 965S320 1005 320 965M350 940C390 1000 405 925 375 992" fill="none" stroke="#c49a45" stroke-width="4"/>
+</svg>

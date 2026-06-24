@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2.5in" height="3.5in" viewBox="0 0 750 1050">
+<rect width="750" height="1050" rx="34" fill="#29231f"/>
+<rect x="20" y="20" width="710" height="1010" rx="28" fill="none" stroke="#a24b36" stroke-width="4"/>
+<rect x="48" y="48" width="654" height="954" rx="20" fill="none" stroke="#a24b36" stroke-width="1"/>
+<path d="M155 505C155 365 300 300 375 410C450 300 595 365 595 505C595 645 450 710 375 600C300 710 155 645 155 505Z" fill="none" stroke="#a24b36" stroke-width="5"/>
+<path d="M235 505C235 430 315 390 375 455C435 390 515 430 515 505C515 580 435 620 375 555C315 620 235 580 235 505Z" fill="none" stroke="#a24b36" stroke-width="3"/>
+<text x="375" y="535" text-anchor="middle" fill="#f0e8d5" font-family="Georgia,serif" font-size="102">A</text>
+<text x="375" y="835" text-anchor="middle" fill="#f0e8d5" font-family="Georgia,serif" font-size="38" font-weight="bold">ALFRED</text>
+<text x="375" y="885" text-anchor="middle" fill="#a24b36" font-family="Arial,sans-serif" font-size="18" font-weight="bold" letter-spacing="4">DANISH PURPOSE</text>
+<text x="375" y="945" text-anchor="middle" fill="#a24b36" font-family="Arial,sans-serif" font-size="12" font-weight="bold" letter-spacing="2">THE BURDEN OF COMMAND SERIES · VOLUME II</text>
+</svg>

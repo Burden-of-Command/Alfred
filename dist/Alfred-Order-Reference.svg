@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2.5in" height="3.5in" viewBox="0 0 750 1050">
+<rect width="750" height="1050" rx="34" fill="#17272d"/><rect x="20" y="20" width="710" height="1010" rx="28" fill="none" stroke="#c49a45" stroke-width="4"/>
+<text x="55" y="90" fill="#f0e8d5" font-family="Georgia" font-size="42" font-weight="bold">ROUND</text>
+<text x="55" y="140" fill="#c49a45" font-family="Arial" font-size="16" letter-spacing="2">INTELLIGENCE / COUNCIL / ORDERS / DESIGN / SERVICE</text>
+<path d="M55 170H695" stroke="#c49a45"/>
+<text x="55" y="225" fill="#c49a45" font-family="Arial" font-size="20" font-weight="bold">CHOOSE TWO DIFFERENT ORDERS</text>
+<text x="55" y="278" fill="#f0e8d5" font-family="Georgia" font-size="22">
+<tspan x="55">Muster: local + two adjacent Ready fyrds.</tspan><tspan x="55" dy="34">March: Alfred's force one connection.</tspan>
+<tspan x="55" dy="34">Confront: Delay, Drive Off, Force, Blockade.</tspan><tspan x="55" dy="34">Fortify: 2 Wealth + Ready to activate Burh.</tspan>
+<tspan x="55" dy="34">Negotiate: pay 1 Wealth and test terms.</tspan><tspan x="55" dy="34">Steward: release fyrds, then recover one.</tspan></text>
+<path d="M55 510H695" stroke="#c49a45"/>
+<text x="55" y="558" fill="#c49a45" font-family="Arial" font-size="20" font-weight="bold">SERVICE AND HARVEST</text>
+<text x="55" y="606" fill="#f0e8d5" font-family="Georgia" font-size="21">
+<tspan x="55">Ready musters → Depleted.</tspan><tspan x="55" dy="32">Emergency: Depleted → Exhausted,</tspan>
+<tspan x="55" dy="28">and lose 1 Obligation.</tspan><tspan x="55" dy="40">At Service 3:</tspan>
+<tspan x="55" dy="32">RELEASE all fyrds and reset Service; or</tspan><tspan x="55" dy="32">RETAIN: exhaust one home, -1 Obligation,</tspan>
+<tspan x="55" dy="28">then set Service to 1.</tspan><tspan x="55" dy="40">HARVEST: release each fyrd or deplete home.</tspan>
+<tspan x="55" dy="28">5 Ready = +2 Wealth; 3 Ready = +1.</tspan></text>
+<text x="375" y="1000" text-anchor="middle" fill="#c49a45" font-family="Arial" font-size="13" letter-spacing="2">THE KINGDOM IS THE ARMY</text>
+</svg>
